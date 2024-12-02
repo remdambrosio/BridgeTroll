@@ -33,9 +33,9 @@ END_DATE = ''
 
 def main():
     parser = argparse.ArgumentParser(description='compares traffic reported by Starlink vs. Ares')
-    parser.add_argument('-re', '--report', type=bool, help='write report to txt file', default=True)
+    parser.add_argument('-re', '--report', action='store_true', help='write report to txt file')
     parser.add_argument('-rf', '--report_filename', type=str, help='filename/path for txt report output', default='report.txt')
-    parser.add_argument('-cs', '--csv', type=bool, help='write data to csv file', default=True)
+    parser.add_argument('-cs', '--csv', action='store_true', help='write data to csv file')
     parser.add_argument('-cf', '--csv_filename', type=str, help='filename/path for csv data output', default='data.csv')
     args = parser.parse_args()
 
